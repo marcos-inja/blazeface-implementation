@@ -37,7 +37,7 @@ async function findFaces() {
         }
         
         if (distance < safeDistance) {
-          document.getElementById("paragraph").innerHTML += `<p>A imagem ${i+1} tem ${distance} de distância com relação a imagem ${j+1}</p>`
+          document.getElementById("paragraph").innerHTML += `<p>O <strong>${i+1}</strong> está a menos que 1.5m do <strong>${j+1}</strong>, distância em pixel: ${distance}px</p>`
           console.log("A imagem " + i  + " tem " + distance + " de distância com relação a imagem " + j);
           ctx.fillStyle = "rgba(207, 78, 39, 0.5)"; //vermelho
           const start = predictions[i].topLeft;
